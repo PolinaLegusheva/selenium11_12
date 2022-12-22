@@ -10,6 +10,7 @@ import static com.pln.pageObj.constants.Constants.EMPTY_BAG;
 public class AddToBagTest extends CommonConditions{
     @Test
     public void testAddItemToFavorite() throws InterruptedException {
+
         ProductPage productPage = new ProductPage(driver);
 
         productPage
@@ -20,6 +21,6 @@ public class AddToBagTest extends CommonConditions{
                 .checkBagStatus();
         String result = productPage.checkBagStatus();
 
-        Assert.assertTrue(EMPTY_BAG.contains(result));
+        Assert.assertEquals(result, EMPTY_BAG);
     }
 }
