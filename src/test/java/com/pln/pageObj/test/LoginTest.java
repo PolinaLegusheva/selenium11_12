@@ -20,8 +20,8 @@ public class LoginTest extends CommonConditions{
 
         loginPage
                 .openPage()
-                .login(user)
-                .signUp();
+                .login(user);
+
 
         String resultOfLogin = accountPage.getTextFromLine();
         assertThat(resultOfLogin, containsString(Constants.MY_ACCOUNT));

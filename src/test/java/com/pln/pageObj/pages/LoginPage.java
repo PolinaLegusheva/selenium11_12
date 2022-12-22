@@ -3,6 +3,7 @@ package com.pln.pageObj.pages;
 import com.pln.pageObj.model.User;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
+import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -49,7 +50,7 @@ public class LoginPage extends AbstractPage{
 
     public LoginPage login(User user){
         emailInput.sendKeys(user.getName());
-        passwordInput.sendKeys(user.getPassword());
+        passwordInput.sendKeys(user.getPassword(), Keys.ENTER);
         logger.info("Login performed");
         return this;
     }

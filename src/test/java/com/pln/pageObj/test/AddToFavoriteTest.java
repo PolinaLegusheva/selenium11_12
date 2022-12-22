@@ -18,6 +18,6 @@ public class AddToFavoriteTest extends CommonConditions{
                 .checkCart();
         String result = catalogPage.checkCartStatus();
 
-        Assert.assertEquals(result, EMPTY_CART);
+        Assert.assertTrue(EMPTY_CART.contains(result));
     }
 }

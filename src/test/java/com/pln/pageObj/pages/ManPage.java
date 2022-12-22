@@ -18,7 +18,7 @@ public class ManPage extends AbstractPage{
     @FindBy(xpath = "//*[@id=\"main-content\"]/div/div[3]/div/div/div/div[3]/div/div/div[2]/div[3]/div[2]/div/ul/li[1]/a")
     WebElement clothingButton;
 
-    @FindBy(xpath = "//*[@id=\"main-content\"]/div/div[3]/div/div/div[2]/div[3]/div/div/div[2]/div[4]")
+    @FindBy(xpath = "//*[@id=\"main-content\"]/div/div[3]/div/div/div[2]/div[3]/div/div/div[2]/div[5]")
     WebElement sizeButton;
 
     @FindBy(xpath = "//*[@id=\"main-content\"]/div/div[3]/div/div/div/div[3]/div/div/div[2]/div[4]/div[2]/div/div/ul/li[4]")

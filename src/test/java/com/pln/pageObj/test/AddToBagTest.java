@@ -20,6 +20,6 @@ public class AddToBagTest extends CommonConditions{
                 .checkBagStatus();
         String result = productPage.checkBagStatus();
 
-        Assert.assertEquals(result, EMPTY_BAG);
+        Assert.assertTrue(EMPTY_BAG.contains(result));
     }
 }
