@@ -1,0 +1,4 @@
+# Project exclude paths
+target/
+.idea
+selenium11_12.iml
