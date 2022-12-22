@@ -18,6 +18,7 @@ public class CommonConditions {
         WebDriverManager.chromedriver().setup();
         WebDriverManager.firefoxdriver().setup();
         driver.manage().window().maximize();
+        driver.manage().deleteAllCookies();
     }
 
     @AfterMethod(alwaysRun = true)

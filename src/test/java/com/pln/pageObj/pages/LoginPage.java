@@ -7,10 +7,13 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 
+import static com.pln.pageObj.constants.PageName.LOGIN_PAGE_URL;
+
 public class LoginPage extends AbstractPage{
     private final Logger logger = LogManager.getRootLogger();
 
-    private final String LOGIN_PAGE_URL = "https://www.adidas.com/us/account-login";
+    @FindBy(id = "glass-gdpr-default-consent-accept-button")
+    WebElement cookies;
 
     @FindBy(xpath = "//*[@id=\"app\"]/div/div[1]/div[1]/div/div/div[1]/div[2]/div[3]/div/div[2]/div[2]/button")
     WebElement loginButton;
@@ -31,6 +34,11 @@ public class LoginPage extends AbstractPage{
     @Override
     public LoginPage openPage() {
         driver.navigate().to(LOGIN_PAGE_URL);
+        return this;
+    }
+
+    public LoginPage closeCookies(){
+        cookies.click();
         return this;
     }
 

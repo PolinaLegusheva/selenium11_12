@@ -9,11 +9,11 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.ui.ExpectedConditions;
+import static com.pln.pageObj.constants.PageName.HOME_PAGE_URL;
 
 public class HomePage extends AbstractPage{
 
     private final Logger logger = LogManager.getRootLogger();
-    private final String HOME_PAGE_URL = "https://www.adidas.com/us";
 
     @FindBy(className = "searchinput___19uW0")
     WebElement searchInput;

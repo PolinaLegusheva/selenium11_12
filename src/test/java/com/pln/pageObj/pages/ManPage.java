@@ -5,9 +5,9 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 
-public class ManPage extends AbstractPage{
+import static com.pln.pageObj.constants.PageName.MAN_PAGE_URL;
 
-    private final String MAN_PAGE_URL = "https://www.adidas.com/us/men-sale";
+public class ManPage extends AbstractPage{
 
     @FindBy(xpath = "//*[@id=\"main-content\"]/div/div[3]/div/div/div[1]/div/div[2]/div/button")
     WebElement filterSortButton;

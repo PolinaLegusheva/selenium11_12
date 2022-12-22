@@ -1,5 +1,6 @@
 package com.pln.pageObj.test;
 
+import com.pln.pageObj.constants.Constants;
 import com.pln.pageObj.model.User;
 import com.pln.pageObj.pages.AccountPage;
 import com.pln.pageObj.pages.LoginPage;
@@ -19,14 +20,10 @@ public class LoginTest extends CommonConditions{
 
         loginPage
                 .openPage()
-                .goToLogin()
                 .login(user)
                 .signUp();
 
-        accountPage
-                .openPage();
-
         String resultOfLogin = accountPage.getTextFromLine();
-        assertThat(resultOfLogin, containsString(user.getName()));
+        assertThat(resultOfLogin, containsString(Constants.MY_ACCOUNT));
     }
 }

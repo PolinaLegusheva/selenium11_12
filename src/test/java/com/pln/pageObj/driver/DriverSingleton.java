@@ -15,8 +15,8 @@ public class DriverSingleton {
     public static WebDriver getDriver() {
         if (null == driver){
             if (null == driver){
-                WebDriverManager.chromedriver().setup();
                 driver = new ChromeDriver();
+                WebDriverManager.chromedriver().setup();
                 driver.manage().window().maximize();
             }
         }
