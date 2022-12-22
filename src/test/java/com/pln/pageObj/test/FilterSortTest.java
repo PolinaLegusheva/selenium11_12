@@ -18,8 +18,6 @@ public class FilterSortTest extends CommonConditions{
                 .clickFilterSort()
                 .clickCategory()
                 .clickClothingCategory()
-                .clickSize()
-                .chooseSize()
                 .clickDeleteFilter()
                 .clickApply();
 

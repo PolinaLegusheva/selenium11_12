@@ -18,12 +18,6 @@ public class ManPage extends AbstractPage{
     @FindBy(xpath = "//*[@id=\"main-content\"]/div/div[3]/div/div/div/div[3]/div/div/div[2]/div[3]/div[2]/div/ul/li[1]/a")
     WebElement clothingButton;
 
-    @FindBy(xpath = "//*[@id=\"main-content\"]/div/div[3]/div/div/div[2]/div[3]/div/div/div[2]/div[5]/div[1]")
-    WebElement sizeButton;
-
-    @FindBy(xpath = "//*[@id=\"main-content\"]/div/div[3]/div/div/div/div[3]/div/div/div[2]/div[4]/div[2]/div/div/ul/li[4]")
-    WebElement chooseSizeButton;
-
     @FindBy(xpath = "//*[@id=\"main-content\"]/div/div[3]/div/div/div/div[3]/div/div/div[2]/div[1]/div/a[3]/div/div/span[1]")
     WebElement deleteFilterButton;
 
@@ -58,18 +52,6 @@ public class ManPage extends AbstractPage{
     public ManPage clickClothingCategory(){
         wait.until(ExpectedConditions.elementToBeClickable(clothingButton));
         clothingButton.click();
-        return this;
-    }
-
-    public ManPage clickSize(){
-        wait.until(ExpectedConditions.elementToBeClickable(sizeButton));
-        sizeButton.click();
-        return this;
-    }
-
-    public ManPage chooseSize(){
-        wait.until(ExpectedConditions.elementToBeClickable(chooseSizeButton));
-        chooseSizeButton.click();
         return this;
     }
 
